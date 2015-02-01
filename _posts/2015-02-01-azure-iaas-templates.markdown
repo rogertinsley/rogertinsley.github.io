@@ -3,7 +3,6 @@ layout: post
 title: "Azure Virtual Machine Templates"
 date: 2015-02-01 14:42:41 +0000
 comments: true
-categories: [Azure, virtual machines, cloud]
 ---
 
 Azure Virtual Machines (Or if you live in buzzword land, Infrastructure-as-a-service) is a great way to quickly spin up new environments. But configuring these environments can be a right pain. 

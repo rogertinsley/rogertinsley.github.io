@@ -3,7 +3,6 @@ layout: post
 title: "Renewing my Microsoft Certified Trainer certification"
 date: 2012-04-11 11:16
 comments: true
-categories: [certification, Microsoft]
 ---
 
 I've just received an email from Microsoft, apparently its time for me to renew my [Microsoft Certified Trainer](http://www.microsoft.com/learning/en/us/certification/mct.aspx) certification. 

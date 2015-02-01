@@ -3,7 +3,6 @@ layout: post
 title: "Devweek 2013"
 date: 2013-03-09 14:46
 comments: true
-categories: [Conference, Microsoft, .NET]
 ---
 
 Last week I attended the UK's largest developer conference hosted at the Barbican Centre, London. There were nine parallel tracks, so tons of talks to choose from. 

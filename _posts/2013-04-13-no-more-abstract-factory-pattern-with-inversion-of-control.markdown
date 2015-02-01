@@ -3,7 +3,6 @@ layout: post
 title: "No more abstract factory pattern with inversion of control"
 date: 2013-04-13 14:48
 comments: true
-categories: [.NET, C-Sharp]
 ---
 
 Are you using an inversion of control container with the factory pattern to create objects at run time? 

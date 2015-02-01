@@ -3,7 +3,6 @@ layout: post
 title: "Thoughts on Devweek 2012"
 date: 2012-03-31 17:12
 comments: true
-categories: [Conference, Microsoft, .NET]
 ---
 
 Devweek is over for another year...
