@@ -19,14 +19,14 @@ I've been wanting to checkout Visual Studio 2015 and ASP.NET vNEXT for a while, 
 
 In the "Create an Image" section of the Virtual Machine wizard, I select "Visual Studio Ultimate 2015 Preview".
 
-![My helpful screenshot]({{ site.url }}/images/azure-vm-choose-an-image.png)
+![Choose a VM image]({{ site.url }}/images/azure-vm-choose-an-image.png)
 
 This is where it gets interesting. I've gone for a D series, they run on a SSD and are blazing fast. Remember, you only pay for compute time (i.e. when the VM is running). At the time of writing, a D2 (2 cores, 7Gb memory) cost £0.20 an hour. Basically I am renting hardware.
 
-![My helpful screenshot]({{ site.url }}/images/azure-vm-configuration.png)
+![Azure VM Configuration]({{ site.url }}/images/azure-vm-configuration.png)
 
 If I use the VM 5 hours a week, that's £1 a week or £52 a year. What's more cost effective? Buying hardware to run it, or just remote desktop to my instance? It's worth thinking about. For more details on Microsoft's pricing on Azure VMs go [here](http://azure.microsoft.com/en-gb/pricing/details/virtual-machines/).
 
 All that's remaining is to remote desktop in and start to use ASP.NET vNEXT on Visual Studio 2015, hurrah!
 
-![My helpful screenshot]({{ site.url }}/images/azure-vm-configuration.png)
+![My helpful screenshot]({{ site.url }}/images/azure-vm-vs2015.png)
