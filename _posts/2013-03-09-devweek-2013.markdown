@@ -1,0 +1,85 @@
+---
+layout: post
+title: "Devweek 2013"
+date: 2013-03-09 14:46
+comments: true
+categories: [Conference, Microsoft, .NET]
+---
+
+Last week I attended the UK's largest developer conference hosted at the Barbican Centre, London. There were nine parallel tracks, so tons of talks to choose from. 
+
+<!-- more -->
+
+## Monday 4th March
+
+Today was the pre-conference workshop, I attended *Effective Architecture Sketches* by [Simon Brown](http://www.codingthearchitecture.com). This workshop was about collaborating and "moving fast" on the software design process that provides a basis for coming up with a better solution, plus it paves the way for collective code ownership. 
+
+Moving fast requires “just enough” up front design to avoid costly rework, which sits conveniently in that vague area between big design up front and foolishly hoping for the best, resulting in chaos.
+
+An excellent workshop, I took a lot away from it and I will be applying the principles on future project work. Infact, I was so impressed that I bought Simon's [book](https://leanpub.com/software-architecture-for-developers).
+
+## Tuesday 5th March
+
+### Technical Keynote
+
+The technical keynote was meant to be delivered by Dave Wheeler, but he put his back out and couldn't attend Devweek. Instead, the keynote was split into two parts, the first part was delivered by [Kevlin Henney](http://www.two-sdg.demon.co.uk/curbralan/kevlin.html) on the topic of 'A Question of Craftmanship'. Kevlin's talk was around thinking about code as art, and how we should be ensuring that we strive to create the best code possible. The second part was delivered by Microsoft employee [Steve Plank](http://blogs.msdn.com/b/plankytronixx/default.aspx) on 'Advances in Cloud Computing', this talk was around IaaS, PaaS and SaaS in the Cloud, but to be honest it more or less came across as a sales pitch.
+
+### Swag!
+
+After the keynote I looked around the exhibition stands, the usual suspects were there - Pluralsight, DevelopMentor, Telerik, and so on. I managed to grab some t-shirts which I'm sure I'll model around the office in the coming weeks. 
+
+DevelopMentor had the wheel of fortune game, I spun the wheel hoping to win a Microsoft Surface RT, instead I won a book on [Essential Scrum](http://www.amazon.co.uk/Essential-Scrum-Practical-Addison-Wesley-Signature/dp/0137043295/ref=sr_1_5?ie=UTF8&qid=1362835324&sr=8-5).
+
+### More sessions
+
+I attended the following sessions during the rest of the day:
+
+* Design patterns in the real world by [Allen Holub](http://www.holub.com). Allen started off with the quote _"To be a competent programmer you need to know design patterns. It's just as important as learning a language."_. Allen demonstrated examples of various patterns, including: Singletons, flyweights, memento, composite, strategy and factory,
+* Understanding the Reactive Framework by [Richard Blewett](http://www.dotnetconsult.co.uk/weblog2/default.aspx). The Rx framework is a library to compose asynchronous and event based programs using observable collections and LINQ-style query operators. If you're doing any event based programming in c# then check it [out](http://msdn.microsoft.com/en-us/data/gg577609.aspx)
+* Taking advantage of C# async/await by [Andrew Clymer](http://andyclymer.blogspot.co.uk). If you're writing asynchronous code with c# 5, you should be using the new [await and async keywords](http://msdn.microsoft.com/en-gb/library/vstudio/hh191443.aspx)
+
+## Wednesday 6th March
+
+On Wednesday I attended the following sessions:
+
+* Modern JavaScript by [K. Scott Allen](http://odetocode.com/blogs/scott/). This session covered how to build abstractions in JavaScript, in particular how to implement closures & prototypes. All code was done in a test driven development fashion using [QUnit](http://qunitjs.com)
+* Messaging everywhere: Service Bus for Windows Server & Windows Azure by [Christian Weyer](http://weblogs.thinktecture.com/cweyer/). An excellent talk covering modern day messaging using the Windows Service Bus (Azure and on-premise). Interestingly, Christian state that MSMQ is a legacy technology and we should start using the [Service Bus](http://www.windowsazure.com/en-us/home/features/messaging/) and various transports like [AMQP](http://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-amqp-overview/), HTTPS or Service Bus Messaging Protocol.
+* Modular Enterprise Development by [Hadi Hariri](http://hadihariri.com). This session covered the like of single responsibility pattern, interface segregation principle, dependency injection, Inversion of control with plugin architecture and aspect-oriented programming.
+* I wanna be cool! Push communication with SignalR for the web & beyond by [Christian Weyer](http://weblogs.thinktecture.com/cweyer/). Christian demoed ASP.NET's latest library, SignalR. It adds real time functionality to your web application, it can do this using various techniques, including web sockets, server side events, forever frame and long polling. SignalR tries to choose the "best" connection supported by server and client (you can also force it to use a specific transport). 
+
+## Thursday 7th March
+
+Here is a list of the sessions I went to:
+
+* I took the hike to Cinema 1 for Kevlin Henney's talk on 'Unit test smells and fragrances' but he didn't turn up! So, I dashed over to the main Barbican hall to catch 'Nine ways your next ASP.NET MVC project can be better' by [Michael Kennedy](http://blog.michaelckennedy.net). Michael covered topics like CSS & JavaScript minification, NuGet, reset css, viewmodels, partial views and IIS web deploy.
+* What's new in WCF 4.5 by [Richard Blewett](http://www.dotnetconsult.co.uk/weblog2/default.aspx). This session covered all the new aspects that shipped with WCF 4.5, these include simplification of the WCF client and server configuration, support for async/await, support for Metro clients, UDP, web sockets & NetHttpBinding (binary encoder for HTTP transport).
+* Emergent design by [Neal Ford](http://nealford.com). This session was about how big designs up front fail because of the unknown unknowns, how we should be using practices such as test driven design, we should be aiming to reduce technical debt by measuring various code metrics like cyclomatic complexity and how we should constantly refactor towards a better design.
+* Applied NoSQL in .NET by [Michael Kennedy](http://blog.michaelckennedy.net). This session started with a discussion into what NoSQL is, and how its not just for "edgy" companies. Corporations like Disney, o2, SAP, Forbes, The Guardian all implement NoSQL backends. The speaker then dived into Visual Studio and coded an ASP.NET MVC web application that implemented [MongoDb](http://www.mongodb.org) as the document database.
+
+## Friday 8th March
+
+It had been a long, but enjoyable week, and today was the last day. It was another full day workshop, I attended Continuous Delivery by [Neal Ford](http://nealford.com) of [Thoughtworks](http://www.thoughtworks.com).
+
+The blurb for the workshop reads as follows: 
+
+_Getting software released to users is often a painful, risky, and time-consuming process. This workshop sets out the principles and technical practices that enable rapid, incremental delivery of high quality, valuable new functionality to users._
+
+_Through automation of the build, deployment, and testing process, and improved collaboration between developers, testers and operations, delivery teams can get changes released in a matter of hours – sometimes even minutes – no matter what the size of a project or the complexity of its code base._
+
+_The workshop materials are derived from the best-selling book ‘Continuous Delivery’, and were created in collaboration with the authors and other of my ThoughtWorks colleagues._
+
+One area that I found interesting was when Neal talked about how we should be storing our environment configurations in source control and use tools such as [Puppet](https://puppetlabs.com) and [Chef](http://www.opscode.com/chef/) to build our development, staging, QA and even production environments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
