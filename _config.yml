@@ -7,7 +7,7 @@ simple_search: http://google.com/search
 description: roger tinsley, programmer, architecture, microsoft, .net, dotnet, azure
 
 # Google analytics
-google_analytics:
+google_analytics: UA-59226105-1
 
 # Optional features
 animated:           false
