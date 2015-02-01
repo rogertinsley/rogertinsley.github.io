@@ -16,7 +16,7 @@ We have been using [Unity](http://msdn.microsoft.com/en-us/library/hh237493.aspx
 Say if I describe three different types of car as follows:
 
 
-``` c# Interface ICar and three types of Cars
+{% highlight c# %}
 public interface ICar
 {
     string CarName { get; }
@@ -45,11 +45,11 @@ public class Peugeot : ICar
         get { return "Peugeot"; }  
     }
 }
-```
+{% endhighlight %}
 
 Ok, so we'll need a factory to create the cars because we don't know what tyoe of ICar we want until run-time.
 
-``` c# ICar factory
+{% highlight c# %}
 public class CarFactory : ICarFactory
 {
     private readonly IUnityContainer unityContainer;
@@ -68,22 +68,22 @@ public class CarFactory : ICarFactory
         throw new NotSupportedException();
     }
 }
-```
+{% endhighlight %}
 
 Then I would normally inject the factory into the class via the constructor.
 
-``` c# inject factory through the constructor
+{% highlight c# %}
 private readonly ICarFactory carFactory;
  
 public HomeController(ICarFactory carFactory)
 {
     this.carFactory = carFactory;
 }
-```
+{% endhighlight %}
 
 And to finish up, we'll need to wire up all dependencies using a Unity bootstrapper.
 
-``` c# Unity bootstrapper
+{% highlight c# %}
 public static class Bootstrapper
 {
     public static void Initialise()
@@ -106,32 +106,32 @@ public static class Bootstrapper
         return container;
     }
 }
-```
+{% endhighlight %}
 
 Basically, we have created a factory that creates the Car based on some run-time parameter being set, say a drop down list being selected in a web application, or some data that is passed to a WCF service call, etc.
 
 How about refactoring out the factory? I'll start by creating the following constructor.
 
-``` c# Funcy constructor
+{% highlight c# %}
 private readonly Func<string, ICar> carFactory;
  
 public HomeController(Func<string, ICar> carFactory)
 {
     this.carFactory = carFactory;
 }
-```
+{% endhighlight %}
 
 In the bootstrapper I tell Unity how to create the Car objects. That is, by using a function that resolves the ICar based on a name.
 
-``` c# Register the func with Unity
+{% highlight c# %}
 container.RegisterType<Func<string, ICar>>(new InjectionFactory(
     ctx => new Func<string, ICar>(name => container.Resolve<ICar>(name))));
 }
-```
+{% endhighlight %}
 
 There is no need for the factory class now, yeah! When we want to create an ICar we'll use the Invoke method of the Func.
 
-``` c# Home controller Invoking the function
+{% highlight c# %}
 public class HomeController : Controller
 {
     private readonly Func<string, ICar> carFactory;
@@ -151,6 +151,6 @@ public class HomeController : Controller
             };
     }
 }
-```
+{% endhighlight %}
 
 To me, this is cleaner code, less code == win. I've created a sample ASP.NET MVC application using this approach, [take a look](http://github.com/rogertinsley/NoMoreFactories).
